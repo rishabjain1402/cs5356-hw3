@@ -117,15 +117,23 @@
         </section>
 
         <!--Fun Fact About Me Section-->
-        <section id="fun-fact">
-            <h2>Fun Fact About Me</h2>
-            <p> I like Marvel, or at least I really did before they messed up the franchise.</p>
-        </section>
-
-        <section id = 'mcu-API'>
+        <section id="marvel">
+            <h2>Marvel & Fun Fact</h2>
+            <p>I like Marvel, or at least I really did before they messed up the franchise.</p>
             <p id="mcu-movie">One second... trying an API for the first time</p>
             <img id="mcu-poster" src="" alt="MCU Movie Poster" style="display: none; width: 250px; border-radius: 10px; margin-top: 10px;">
         </section>
+
+        <!-- New Features Section -->
+        <section id="new-features">
+            <h2>New Features I Looked Into Outside of Class</h2>
+            <p>I looked into “details” for a new feature not discussed in class. The <code>&lt;details&gt;</code> HTML element allows users to toggle hidden content without needing JavaScript. I implemented this feature by wrapping extra information inside the <code>&lt;details&gt;</code> tag, with the <code>&lt;summary&gt;</code> element acting as the clickable area. This was applied to images on my website, allowing users to click on a photo to reveal additional context. This feature enhances interactivity and user engagement while keeping the webpage clean and organized. This feature could be used outside of images as well, which includes hovering over text to reveal longer passages.</p>
+
+            <p>For this assignment, I explored two new CSS features: frosted glass effect (<code>backdrop-filter</code>) and animation (<code>@keyframes</code> for shake effect). The frosted-box effect was applied to the "About Me" section, giving it a semi-transparent, blurred background – making it seem more of a clean UI look. This was done using <code>backdrop-filter: blur(10px);</code> which enhances the visual aesthetics by making the section appear like frosted glass. I also added a shake animation using <code>@keyframes</code>, making images shake slightly when hovered over. This was done by using small <code>translateX()</code> movements that alternate back and forth, creating an effect when users interact with images. These two features improve both design and user interaction without requiring Java.</p>
+
+            <p>I want to make note that the floating animated shapes were coded using LLMs. I do not want this part of the code to be counted towards the assignment for CSS implementation – I did this more for personal enjoyment and to test out the CSS capabilities without JavaScript.</p>
+        </section>
+
         
     </main>
 
@@ -149,7 +157,7 @@
     
                 const poster = document.getElementById("mcu-poster");
                 poster.src = data.poster_url;
-                poster.style.display = "block"; // Make the image visible
+                poster.style.display = "block"; 
             } catch (error) {
                 document.getElementById("mcu-movie").innerText = "Failed to load MCU movie data.";
             }
